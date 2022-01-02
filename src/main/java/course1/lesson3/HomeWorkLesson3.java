@@ -16,20 +16,71 @@ public class HomeWorkLesson3 {
         System.out.println("Task5 results:");
         printArray(Task5(8,158));
 
+        Task6(new int[]{6, 4, 24, 2, 15});
+
+        Task8(new int[]{1, 5, 3, 2, 11},2);
+
+    }
+
+    public static void Task8(int[] arr, int n) {
+
+        int newIndex;
+        int tmpValue;
+
+        System.out.println("Task6 results:");
+        System.out.print("array before shift\t: ");
+        printArray(arr);
+
+        for (int i = 0; i < arr.length; i++) {
+            newIndex=i+n;
+            if (newIndex >= arr.length){
+                newIndex=newIndex-arr.length;
+                tmpValue=arr[i];
+                arr[newIndex]=arr[i];
+            }
+        }
+        System.out.print("array after shift\t: ");
+        printArray(arr);
+
+    }
+
+    public static void Task6(int[] arr) {
+
+        int vMin=arr[0];
+        int vMax=arr[0];
+
+        System.out.println("Task6 results:");
+        printArray(arr);
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < vMin) {
+                vMin=arr[i];
+            }
+            if (arr[i] > vMax) {
+                vMax=arr[i];
+            }
+        }
+        System.out.println("Минимальное значение = " + vMin);
+        System.out.println("Максимальное значение = " + vMax);
     }
 
     public static void Task4 (int len) {
 
-        int[][] array = new int[len][len];
+        int[][] array=new int[len][len];
+        int k=len-1;
 
         System.out.println("Task4 results:");
 
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (i == j) {
-                    array[i][j] = 1;
+                    array[i][j]=1;
                 }
-                System.out.print(array[i][j] + " ");
+                if (j == k) {
+                    array[i][k]=1;
+                    k--;
+                }
+                System.out.print(array[i][j]+" ");
             }
             System.out.println();
         }
