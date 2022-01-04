@@ -27,7 +27,7 @@ public class HomeWorkLesson3 {
         int newIndex;
         int tmpValue;
 
-        System.out.println("Task6 results:");
+        System.out.println("Task8 results:");
         System.out.print("array before shift\t: ");
         printArray(arr);
 
@@ -104,7 +104,7 @@ public class HomeWorkLesson3 {
         printArray(arr);
         }
 
-    public static void Task2(int[] arr) {
+    public static void task2(int[] arr) {
 
         System.out.println("Task2 results:");
 
