@@ -5,24 +5,24 @@ import java.util.Arrays;
 public class HomeWorkLesson3 {
     public static void main(String[] args) {
 
-        Task1(new int[]{1, 1, 0, 0, 1});
+        task1(new int[]{1, 1, 0, 0, 1});
 
-        Task2(new int[100]);
+        task2(new int[100]);
 
-        Task3(new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1});
+        task3(new int[]{1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1});
 
-        Task4(5);
+        task4(5);
 
         System.out.println("Task5 results:");
-        printArray(Task5(8,158));
+        printArray(task5(8,158));
 
-        Task6(new int[]{6, 4, 24, 2, 15});
+        task6(new int[]{6, 4, 24, 2, 15});
 
-        Task8(new int[]{1, 5, 3, 2, 11},2);
+        task8(new int[]{1, 5, 3, 2, 11},2);
 
     }
 
-    public static void Task8(int[] arr, int n) {
+    public static void task8(int[] arr, int n) {
 
         int newIndex;
         int tmpValue;
@@ -44,7 +44,7 @@ public class HomeWorkLesson3 {
 
     }
 
-    public static void Task6(int[] arr) {
+    public static void task6(int[] arr) {
 
         int vMin=arr[0];
         int vMax=arr[0];
@@ -64,7 +64,7 @@ public class HomeWorkLesson3 {
         System.out.println("Максимальное значение = " + vMax);
     }
 
-    public static void Task4 (int len) {
+    public static void task4 (int len) {
 
         int[][] array=new int[len][len];
         int k=len-1;
@@ -86,7 +86,7 @@ public class HomeWorkLesson3 {
         }
     }
 
-    public static void Task1(int[] arr) {
+    public static void task1(int[] arr) {
 
         System.out.println("Task1 results:");
         System.out.print("array before trahsformation\t: ");
@@ -115,7 +115,7 @@ public class HomeWorkLesson3 {
         printArray(arr);
     }
 
-    public static void Task3(int[] arr) {
+    public static void task3(int[] arr) {
 
         System.out.println("Task3 results:");
         System.out.print("array before trahsformation\t: ");
@@ -131,7 +131,7 @@ public class HomeWorkLesson3 {
         printArray(arr);
     }
 
-    public static int[] Task5(int len, int initialValue) {
+    public static int[] task5(int len, int initialValue) {
 
         int[] arr = new int[len];
 
