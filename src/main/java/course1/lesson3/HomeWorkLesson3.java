@@ -5,6 +5,8 @@ import java.util.Arrays;
 public class HomeWorkLesson3 {
     public static void main(String[] args) {
 
+        boolean resBool;
+
         task1(new int[]{1, 1, 0, 0, 1});
 
         task2(new int[100]);
@@ -18,8 +20,47 @@ public class HomeWorkLesson3 {
 
         task6(new int[]{6, 4, 24, 2, 15});
 
+        System.out.println("Task7 results: ");
+        resBool = CheckSumBalance(new int[]{2, 2, 2, 1, 2, 2, 10, 1});
+        resBool = CheckSumBalance(new int[]{1, 1, 1, 2, 1});
+        resBool = CheckSumBalance(new int[]{1, 4, 1, 2, 1});
+
         task8(new int[]{1, 2, 3, 4, 5},9);
 
+    }
+
+    public static boolean CheckSumBalance(int[] arr) {
+
+        int sum1 = 0;
+        int sum2 = 0;
+        String ch = " ";
+
+        for (int i = 0; i < arr.length; i++) {
+            sum1 = 0;
+            sum2 = 0;
+            for (int j = 0; j < i + 1; j++) { //считаем сумму "левой" части массива
+                sum1 += arr[j];
+            }
+            for (int j = i+1; j < arr.length; j++) { //считаем сумму "правой" части массива
+                sum2 += arr[j];
+            }
+//            System.out.println("sum1 = " +sum1 + ", sum2 = " + sum2);
+            if (sum1 == sum2) {
+                System.out.print("true: ");
+                for (int k = 0; k < arr.length; k++) {
+                    ch = " ";
+                    if (k == i) {
+                        ch = " ||| ";
+                    }
+                    System.out.print(arr[k] + ch);
+                }
+                System.out.println();
+                return true;
+            }
+        }
+        System.out.print("false: ");
+        printArray(arr);
+        return false;
     }
 
     public static void task8(int[] arr, int n) {
