@@ -18,29 +18,46 @@ public class HomeWorkLesson3 {
 
         task6(new int[]{6, 4, 24, 2, 15});
 
-        task8(new int[]{1, 5, 3, 2, 11},2);
+        task8(new int[]{1, 2, 3, 4, 5},9);
 
     }
 
     public static void task8(int[] arr, int n) {
 
-        int newIndex;
-        int tmpValue;
+        int[] arrNew = new int[arr.length];
 
         System.out.println("Task8 results:");
         System.out.print("array before shift\t: ");
         printArray(arr);
 
-        for (int i = 0; i < arr.length; i++) {
-            newIndex=i+n;
-            if (newIndex >= arr.length){
-                newIndex=newIndex-arr.length;
-                tmpValue=arr[i];
-                arr[newIndex]=arr[i];
-            }
+        if (n == 0) {
+            System.out.println("n = 0 - сдвига нет");
+            System.out.print("array after shift\t: ");
+            printArray(arr);
+            return;
         }
+
+        for (int j = 1; j < Math.abs(n)+1; j++) {
+            for (int i = 0; i < arr.length; i++) {
+                if (n > 0) { //сдвиг вправо
+                    if (i == arr.length-1) {
+                        arrNew[0] = arr [arr.length-1];
+                    } else {
+                        arrNew[i+1] = arr [i];
+                    }
+                } else { //сдвиг влево
+                    if (i == 0) {
+                        arrNew[arr.length-1] = arr [0];
+                    } else {
+                        arrNew[i-1] = arr [i];
+                    }
+                }
+            }
+            arr = arrNew.clone();
+        }
+
         System.out.print("array after shift\t: ");
-        printArray(arr);
+        printArray(arrNew);
 
     }
 
