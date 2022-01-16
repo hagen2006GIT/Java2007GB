@@ -11,7 +11,7 @@ public class HW4_CrossesZeroesApp {
     //Размер поля
     public static final int SIZE = 5;
 
-    //Точек для победы (SIZE - 1 для задания под 1*)
+    //Точек для победы (SIZE - 1 для задания под 1 *)
     public static final int DOTS_TO_WIN = 4;
 
     //Описание точек
