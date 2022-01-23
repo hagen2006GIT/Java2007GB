@@ -2,6 +2,7 @@ package course1.lesson6;
 
 public class Animal {
 
+
     protected String name;
 
     public String getName() {

@@ -5,6 +5,7 @@ public class RunAppLesson6 {
     public static void main(String[] args) {
 
         Animal[] zooList = new Animal[4];
+
         zooList[0] = new Dog ("Sharick");
         zooList[1] = new Cat("Barsik");
         zooList[2] = new Cat("Nastya");
@@ -17,12 +18,14 @@ public class RunAppLesson6 {
         for (Animal pet : zooList) {
             pet.printName();
         }
+
         System.out.println();
         System.out.println();
         System.out.println("Побежали.............................");
         for (Animal pet : zooList) {
             pet.doRun(300);
         }
+
         System.out.println();
         System.out.println();
         System.out.println("Поплыли...............................");
