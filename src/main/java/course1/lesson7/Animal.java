@@ -1,4 +1,4 @@
-package course1.lesson6;
+package course1.lesson7;
 
 public class Animal {
 
@@ -34,7 +34,7 @@ public class Animal {
         if (this instanceof Dog) {
             System.out.println(". I'm Dog" + ". maxRUN = " + ((Dog) this).maxRun + ", maxSWIM = " + ((Dog) this).maxSwim);
         } else if (this instanceof Cat) {
-            System.out.println(". I'm Cat" + ". maxRUN = " + ((Cat) this).maxRun + ", maxSWIM = " + ((Cat) this).maxSwim);
+            System.out.println(". I'm Cat" + ". maxRUN = " + ((Cat) this).maxRun + ", maxSWIM = " + ((Cat) this).maxSwim + ". Satiety: " + ((Cat) this).satiety);
         }
     }
 }
